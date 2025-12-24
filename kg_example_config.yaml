@@ -1,0 +1,45 @@
+# RecBole 知识图谱推荐配置示例
+# RecBole Knowledge-aware Recommendation Configuration Example
+
+# 数据集配置 / Dataset Configuration
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+RATING_FIELD: rating
+TIME_FIELD: timestamp
+
+# 知识图谱配置 / Knowledge Graph Configuration
+HEAD_ENTITY_ID_FIELD: head_id
+TAIL_ENTITY_ID_FIELD: tail_id
+RELATION_ID_FIELD: relation_id
+ENTITY_ID_FIELD: entity_id
+
+# 加载数据列 / Load Data Columns
+load_col:
+    inter: [user_id, item_id, rating, timestamp]
+    kg: [head_id, relation_id, tail_id]
+    link: [item_id, entity_id]
+
+# 模型配置 / Model Configuration
+embedding_size: 64
+kg_embedding_size: 64
+reg_weights: [1e-02, 1e-02]
+
+# 训练和评估配置 / Training and Evaluation Configuration
+epochs: 50
+train_batch_size: 2048
+eval_batch_size: 4096
+learning_rate: 0.001
+
+eval_args:
+    split: {'RS': [0.8, 0.1, 0.1]}
+    group_by: user
+    order: RO
+    mode: full
+
+# 评估指标 / Evaluation Metrics
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
+topk: [5, 10]
+valid_metric: MRR@10
+
+# 其他配置 / Other Configuration
+show_progress: True
