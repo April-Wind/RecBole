@@ -38,13 +38,13 @@ def test_kg_file_format(file_path):
     
     # 检查第一行头部
     expected_header = "head_id:token\trelation_id:token\ttail_id:token\n"
-    if lines[0] == expected_header:
-        print("  ✓ 头部格式正确 / Header format correct")
-    else:
+    if lines[0] != expected_header:
         print(f"  ✗ 头部格式错误 / Header format incorrect")
         print(f"    期望 / Expected: {repr(expected_header)}")
         print(f"    实际 / Actual: {repr(lines[0])}")
         return False
+    
+    print("  ✓ 头部格式正确 / Header format correct")
     
     # 检查数据行
     for i, line in enumerate(lines[1:], start=2):
@@ -75,13 +75,13 @@ def test_link_file_format(file_path):
     
     # 检查第一行头部
     expected_header = "item_id:token\tentity_id:token\n"
-    if lines[0] == expected_header:
-        print("  ✓ 头部格式正确 / Header format correct")
-    else:
+    if lines[0] != expected_header:
         print(f"  ✗ 头部格式错误 / Header format incorrect")
         print(f"    期望 / Expected: {repr(expected_header)}")
         print(f"    实际 / Actual: {repr(lines[0])}")
         return False
+    
+    print("  ✓ 头部格式正确 / Header format correct")
     
     # 检查数据行
     for i, line in enumerate(lines[1:], start=2):

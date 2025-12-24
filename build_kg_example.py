@@ -392,8 +392,8 @@ def main():
     print("  2. 准备对应的 .inter 交互文件 / Prepare corresponding .inter interaction file")
     print("  3. 在RecBole中使用这些数据集训练知识感知推荐模型")
     print("     Use these datasets in RecBole to train knowledge-aware recommendation models")
-    print("  4. 示例: python run_recbole.py --model=CKE --dataset=movie_example")
-    print("     Example: python run_recbole.py --model=CKE --dataset=movie_example")
+    print("  4. 示例: python run_kg_example.py --model=CKE --dataset=movie_example")
+    print("     Example: python run_kg_example.py --model=CKE --dataset=movie_example")
     print("\n")
 
 
