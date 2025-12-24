@@ -1,0 +1,17 @@
+head_id:token	relation_id:token	tail_id:token
+movie_1	directed_by	director_nolan
+movie_1	has_actor	actor_dicaprio
+movie_1	has_genre	genre_scifi
+movie_1	has_genre	genre_thriller
+movie_2	directed_by	director_tarantino
+movie_2	has_actor	actor_travolta
+movie_2	has_actor	actor_jackson
+movie_2	has_genre	genre_crime
+movie_3	directed_by	director_nolan
+movie_3	has_actor	actor_bale
+movie_3	has_genre	genre_action
+movie_3	has_genre	genre_crime
+director_nolan	won_award	award_oscar
+director_tarantino	won_award	award_oscar
+actor_dicaprio	collaborated_with	actor_bale
+actor_travolta	collaborated_with	actor_jackson

@@ -1,0 +1,15 @@
+head_id:token	relation_id:token	tail_id:token
+product_laptop_1	brand	brand_dell
+product_laptop_1	category	category_electronics
+product_laptop_1	has_feature	feature_16gb_ram
+product_laptop_1	has_feature	feature_ssd
+product_laptop_2	brand	brand_apple
+product_laptop_2	category	category_electronics
+product_laptop_2	has_feature	feature_retina_display
+product_laptop_2	has_feature	feature_m1_chip
+product_phone_1	brand	brand_apple
+product_phone_1	category	category_electronics
+product_phone_1	has_feature	feature_5g
+brand_dell	headquartered_in	location_usa
+brand_apple	headquartered_in	location_usa
+brand_apple	founded_by	person_jobs
